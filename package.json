@@ -1,0 +1,21 @@
+{
+  "name": "typescripttest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/main.js",
+  "dependencies": {
+    "@types/ws": "^7.2.6",
+    "discord.js": "^12.2.0",
+    "fs": "0.0.1-security",
+    "typescript": "^3.9.7",
+    "ws": "^7.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.27"
+  },
+  "scripts": {
+    "start": "node ./dist/src/app.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
