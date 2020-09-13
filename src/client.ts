@@ -1,7 +1,6 @@
 import Discord from 'discord.js';
 import { CommandHandler } from './command_handler';
 
-
 export class Client {
     private bot: Discord.Client;
     private commandHandler: CommandHandler;
@@ -15,7 +14,7 @@ export class Client {
         this.bot.on('ready', () => {
             console.log("ready");
         });
-        this.bot.user?.setActivity({type: 'CUSTOM_STATUS', name: "Watching targeted servers :eyes:"});
+        this.bot.user?.setActivity({type: 'CUSTOM_STATUS', name: "[ONLINE]Watching targeted servers :eyes:"});
 
         this.bot.on('message', (msg) => {
             if(msg.author.bot || msg.channel.type != 'text' || !msg.content.startsWith(this.commandHandler.prefix)) return;
@@ -28,3 +27,5 @@ export class Client {
     }
     
 }
+
+export let bot: Client = new Client()
